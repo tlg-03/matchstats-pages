@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Support · Match Stats</title>
+<style>
+  :root{
+    --ink:#0F172A; --slate:#475569; --bg:#eef2f0; --card:#ffffff; --line:#d7e0db; --accent:#2C3A36;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e9efec; --slate:#a7b8b1; --bg:#0d1512; --card:#18211d; --line:#2b3733; --accent:#c4ccd2; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--ink); line-height:1.6;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:720px; margin:0 auto; padding:40px 22px 80px}
+  header{margin-bottom:28px}
+  h1{font-size:30px; line-height:1.15; margin:0 0 6px; letter-spacing:-.4px}
+  .sub{color:var(--slate); font-size:15px; margin:0}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin-bottom:16px}
+  h2{font-size:17px; margin:0 0 8px; letter-spacing:.2px}
+  p{margin:0 0 12px}
+  p:last-child{margin-bottom:0}
+  ol{margin:0 0 12px; padding-left:20px}
+  li{margin-bottom:6px}
+  .lead{font-size:18px; font-weight:600}
+  .mail{display:inline-block; margin-top:4px; font-weight:600}
+  .foot{color:var(--slate); font-size:13.5px; margin-top:26px}
+  a{color:var(--accent)}
+  kbd{background:rgba(128,128,128,.16); padding:1px 6px; border-radius:5px; font-size:.88em;
+      font-family:inherit; font-weight:600; white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Match Stats — Support</h1>
+    <p class="sub">Lacrosse match coding for coaches</p>
+  </header>
+
+  <div class="card">
+    <p class="lead">Need help? Email <a class="mail" href="mailto:matchstatssupport@gmail.com">matchstatssupport@gmail.com</a></p>
+    <p>Tell us what device you're on (iPhone, iPad or Mac) and what you were doing when it went wrong.
+       If it's about a specific match, the date and the two team names help us find it.</p>
+  </div>
+
+  <div class="card">
+    <h2>Does it work without internet?</h2>
+    <p>Yes. Everything is built into the app — there is no server, and no part of coding a match needs
+       a connection. You can use it at a ground with no signal at all.</p>
+  </div>
+
+  <div class="card">
+    <h2>Where are my games kept, and are they safe?</h2>
+    <p>On your device, in the app's own storage. The app also writes an automatic backup for itself as
+       you go, which is included whenever your device backs up to iCloud or a computer.</p>
+    <p>For a copy you control — one that survives a lost or wiped device — use
+       <kbd>Settings</kbd> → <kbd>Backup all</kbd> and save it to Files or iCloud Drive.</p>
+  </div>
+
+  <div class="card">
+    <h2>How do I move to a new iPad or iPhone?</h2>
+    <ol>
+      <li>On the old device: <kbd>Settings</kbd> → <kbd>Backup all</kbd>, and save the file somewhere
+          you can reach from both — iCloud Drive is easiest.</li>
+      <li>On the new device: <kbd>Settings</kbd> → <kbd>Restore backup</kbd>, and pick that file.</li>
+    </ol>
+    <p>Games are not transferred automatically, so do this before you retire the old device.</p>
+  </div>
+
+  <div class="card">
+    <h2>Can I put my club's colours on it?</h2>
+    <p><kbd>Settings</kbd> → <kbd>Club</kbd>, then add your badge. The app reads the badge and works out
+       its own colours from it, so the whole app takes on your club's look.</p>
+  </div>
+
+  <div class="card">
+    <h2>Can I change the text size, or use dark mode?</h2>
+    <p>Text size follows your device setting — change it in iOS <kbd>Settings</kbd> →
+       <kbd>Display &amp; Brightness</kbd> → <kbd>Text Size</kbd> and the app follows.</p>
+    <p>For light or dark, use <kbd>Settings</kbd> → <kbd>Theme</kbd> in the app. Auto follows your
+       device. Printed reports always come out light, whichever you pick.</p>
+  </div>
+
+  <div class="card">
+    <h2>Something's wrong with a match I've coded</h2>
+    <p>Most things can be corrected after the fact — tap an entry in the coding log to edit or delete
+       it, and undo is available while you're still coding. If a match looks wrong in a way you can't
+       fix, email us before deleting it; it's usually recoverable.</p>
+  </div>
+
+  <p class="foot">Privacy policy: <a href="./privacy.html">privacy.html</a></p>
+</div>
+</body>
+</html>
