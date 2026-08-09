@@ -1,0 +1,13 @@
+# Canonical identity for this project.
+#
+# Git records whatever name was configured at commit time, so history accumulates variants:
+# "Tom Grech" from the early commits here, and the GitHub account identity on anything committed
+# through github.com rather than from a local clone. This file maps every variant onto one name
+# WITHOUT rewriting history — no changed commit hashes, no force push, nothing to break on a
+# second machine.
+#
+# Applies to git log, shortlog and blame. It does NOT change what github.com displays.
+
+Thomas Grech <tomgrech@hotmail.com>
+Thomas Grech <tomgrech@hotmail.com> Tom Grech <tomgrech@hotmail.com>
+Thomas Grech <tomgrech@hotmail.com> tlg-03 <120287440+tlg-03@users.noreply.github.com>
