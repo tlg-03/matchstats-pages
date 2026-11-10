@@ -43,7 +43,10 @@ make wt-rm NAME=fix-wording     from the main checkout
 The push in `make wt-done` starts the GitHub Pages build. `make publish` runs the tests again,
 pushes `main` if it is ahead of GitHub (it should not be after `wt-done`), checks that GitHub holds
 that commit, then waits up to 10 minutes until every live `.html`, `.css` and `.js` file is byte for
-byte the committed one. It is `workspace/bin/publish matchstats-pages`, which also runs on its own.
+byte the committed one; that part is `workspace/bin/publish matchstats-pages`, which also runs on
+its own. Last, `tests/check_pages.py --live` asks the live site for every other tracked file, and for
+the `.html` page each Markdown file would become (`README.html`, `DEVELOPMENT.html`), and expects a
+404 for each.
 
 `index.html` is a copy of `support.html` so that the bare URL serves the support page instead of a
 404. Change both together; `make test` refuses a difference.
@@ -55,10 +58,15 @@ byte the committed one. It is `workspace/bin/publish matchstats-pages`, which al
 
 GitHub Pages builds `main` with Jekyll (the legacy build, from the root). The pages have no front
 matter, so Jekyll copies them unchanged. `_config.yml` keeps everything else off the site: it
-excludes `Makefile`, `README.md`, `DEVELOPMENT.md` and `tests/`, and Jekyll never serves names
-starting with `.` or `_` (`.mailmap`, `.gitignore`, `_config.yml`). A new file that is not a page
-goes into that exclude list; `make test` refuses one that would be published. Do not add a
-`.nojekyll` file: it would serve every file, these notes included.
+excludes `Makefile`, `README.md`, `DEVELOPMENT.md` and `tests/`, and Jekyll skips names starting
+with `.` or `_` (`.mailmap`, `.gitignore`, `_config.yml`), except `.htaccess` and the posts in a
+`_posts` folder. An exclude entry hides every path that starts with it, so `tests` would hide a
+`tests.html` too. Do not add a `.nojekyll` file: it would serve every file, these notes included.
+
+A new file for working on the site goes into that exclude list; `make test` refuses one that would
+be published. A new file the site needs that is not `.html`, `.css` or `.js` (an image, say) must
+not be excluded: add its type to `SERVED_TYPES` in `tests/check_pages.py` and to the types
+`workspace/bin/publish` compares with the live site, which today are only those three.
 
 ## Tests
 
@@ -66,9 +74,11 @@ goes into that exclude list; `make test` refuses one that would be published. Do
 
 - `cmp index.html support.html`: the two are byte-identical.
 - `tests/check_pages.py`: every page starts with `<!doctype html>` and closes every element
-  explicitly, in order (void elements such as `<meta>` and `<br>` have no closing tag), and every
-  file GitHub Pages would publish is a page (`.html`, `.css` or `.js`) or is excluded in
-  `_config.yml`. It reads tracked files and new ones that are not ignored.
+  explicitly, in order (void elements such as `<meta>` and `<br>` have no closing tag); every
+  file GitHub Pages would publish is a page (`.html`, `.css` or `.js`); and every page is
+  published, since `make publish` looks for each one on the live site. It reads tracked files and
+  new ones that are not ignored, and follows Jekyll's rules closely, not exactly: the live check in
+  `make publish` is the proof.
 
 ## Local data
 
