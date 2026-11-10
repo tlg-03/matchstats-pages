@@ -1,0 +1,5 @@
+# GitHub Pages builds this repo with Jekyll (the legacy build, from main, /). The pages have no
+# front matter, so they are served byte for byte. Only the pages are served: everything else that
+# is tracked is listed here. Jekyll never serves names starting with "." or "_" (.mailmap,
+# .gitignore, this file). Keep the list on one line: make test reads it.
+exclude: [Makefile, README.md, DEVELOPMENT.md, tests]
