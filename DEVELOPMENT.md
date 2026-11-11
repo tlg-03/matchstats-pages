@@ -91,8 +91,8 @@ not be excluded: add its type to `SERVED_TYPES` in `tests/check_pages.py` and to
 
 ## Local data
 
-- In the repo: none (`LOCAL_DATA` is empty).
-- Outside the repo: none.
+- **In the repo:** none (`LOCAL_DATA` is empty).
+- **Outside the repo:** none.
 
 ## Commits
 
