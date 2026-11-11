@@ -3,6 +3,15 @@
 The way of working (worktrees, checkpoints, hooks) is the shared standard in `tlg-03/workspace`
 (`STANDARD.md`); `make help` lists the commands. This file covers what is particular to this repo.
 
+## Current state
+
+Last updated: 11 Nov 2026.
+
+- **In progress:** none. The live site serves `main` (3946da5) byte for byte.
+- **Recent decisions:** 1 Aug 2026: the repo is public, because GitHub Pages on a free account needs that, so it holds only the privacy, support and index pages and the files for working on them, never app source. 20 Aug 2026: one privacy policy and one support page cover every sport, so there is one policy to keep in step and one pair of URLs to file. 10 Nov 2026: pages go live from `main` with `make publish`, which checks that the live pages match `main` and every other file answers 404, so nothing but the pages is ever served (see [Changing the pages](#changing-the-pages)).
+- **Waiting on the owner:** none.
+- **Next:** none.
+
 ## What this is
 
 The privacy policy and the support page for every MatchStats app (lacrosse and netball, on iPhone,
