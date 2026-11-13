@@ -9,9 +9,9 @@ Last updated: 13 Nov 2026.
 
 - **In progress:** none. The live site serves `main` byte for byte (`make publish` checks it).
 - **Recent decisions:** 1 Aug 2026: the repo is public, because GitHub Pages on a free account needs that, so it holds only the privacy, support and index pages and the files for working on them, never app source. 20 Aug 2026: one privacy policy and one support page cover every sport, so there is one policy to keep in step and one pair of URLs to file. 10 Nov 2026: pages go live from `main` with `make publish`, which checks that the live pages match `main` and every other file answers 404, so nothing but the pages is ever served (see [Changing the pages](#changing-the-pages)).
-- **Done 13 Nov 2026:** `privacy.html` rewritten for live share on game day, the Mac apps, player photos and automatic backups, and fact-checked against both apps' source (the owner approved it).
-- **Waiting on the owner:** the Mac wording for the support page, now that both MatchStats apps ship on the Mac through TestFlight: moving to a new device, text size and backups describe only the iPhone and iPad.
-- **Next:** once the owner settles that wording, change `support.html`, copy it to `index.html`, and publish with `make publish` (see [Changing the pages](#changing-the-pages)).
+- **Done 13 Nov 2026:** `privacy.html` rewritten for live share on game day, the Mac apps, player photos and automatic backups; `support.html` (and `index.html`) rewritten for iPhone, iPad and Mac, with a live-share checklist. Both fact-checked against both apps' source and approved by the owner.
+- **Waiting on the owner:** none.
+- **Next:** none. If an app's labels change (the Mac File menu items differ between the apps, so the page names neither), check the support page still matches.
 
 ## What this is
 
